@@ -1,0 +1,96 @@
+.mycontaner {
+    margin-top: 40px;
+}
+.card img {
+    height: 150px;
+}
+.proclass {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.proclass h1 {
+    font-size: 20px;
+}
+.col4class {
+    text-decoration: none;
+    color: black;
+}
+.col4class:hover {
+    color: black;
+}
+.categoryprod h1 {
+    font-size: 20px;
+    outline: double;
+    margin-bottom: 20px;
+}
+.prodetails {
+    text-align: center;
+}
+.detailspron h1 {
+    font-size: 20px;
+}
+.detailsaddtocart a {
+    text-decoration: none;
+    color: white;
+}
+.detailsaddtocart {
+    background-color: #e73673;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.sliderimg {
+    height: 400px;
+}
+.frontendsidbar a {
+    text-decoration: none;
+    color: black;
+}
+.frontendsidbar a:hover {
+    color: black;
+}
+.mydetailsstyle {
+    box-shadow: 10px 5px 8px 0px;
+}
+.collections a {
+    text-decoration: none;
+    color: white;
+}
+.collections h1 {
+    font-size: 18px;
+}
+.collections {
+    background-color: #e73673;
+    color: white;
+    margin-bottom: 20px;
+}
+.loginform {
+    text-align: center;
+    box-shadow: 10px 8px 5px 0px;
+}
+.loginform input {
+    box-shadow: 10px 8px 5px 0px;
+    outline: 0px;
+    outline-offset: 0px;
+}
+.loginform label {
+    box-shadow: 5px 4px 3px 0px;
+    width: 100%;
+    font-size: 18px;
+}
+.cartimg {
+    width: 70px;
+    height: 70px;
+}
+
+.deletecart {
+    text-decoration: none;
+    color: white;
+}
+th button {
+    border: 0px;
+    background-color: #e73673;
+    font-size: 20px;
+}
+th button a:hover {
+    color: wheat;
+}

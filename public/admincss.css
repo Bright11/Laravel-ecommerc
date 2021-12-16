@@ -1,0 +1,81 @@
+.myform {
+    text-align: center;
+}
+.myform input {
+    margin-top: 15px;
+    box-shadow: 10px 8px 10px 5px;
+}
+.myform textarea {
+    margin-top: 15px;
+    box-shadow: 10px 8px 10px 5px;
+}
+.myform select {
+    margin-top: 15px;
+    box-shadow: 10px 8px 10px 5px;
+}
+
+.myform label {
+    margin-top: 15px;
+    box-shadow: 10px 8px 10px 5px;
+    font-size: 18px;
+}
+.mysubmitbtn {
+    background-color: #27272a;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+.mysubmitbtn:hover {
+    background-color: #e32f6e;
+}
+.sidebar {
+    box-shadow: 10px 8px 10px 5px;
+    background-color: #3d3d44;
+}
+.active {
+    background-color: #e73673 !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+li:hover {
+    background-color: #e73673 !important;
+    color: white;
+}
+.active {
+    background-color: #e73673 !important;
+    color: black;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+li a:hover {
+    color: white;
+}
+.slidebarli a {
+    color: black;
+}
+.myform {
+    box-shadow: 10px 8px 10px 5px;
+}
+.message {
+    height: 40px;
+    background-color: #e73673 !important;
+    text-align: center;
+    color: white;
+    margin-bottom: 18px;
+}
+.message h1 {
+    padding-top: 5px;
+    font-size: 20px;
+}
+.messagestatus {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer {
+    text-align: center;
+    margin-top: 30px;
+}
