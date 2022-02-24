@@ -35,7 +35,7 @@ View Categories
                                     <th>{{$item->category->name}}</th>
                                     <th>{{$item['price']}}</th>
                                     <th>{{$item['discount']}}</th>
-                                    <th><img src="{{Storage::url($item['image'])}}" width="80"/></th>
+                                    <th><img src="{{asset('product/'.$item['image'])}}" width="80"/></th>
                                     <th><a href="/admins/updatepropage/{{$item['id']}}" class="btn btn-success">Update</a></th>
                                     <th><a href="#" class="btn btn-danger">Delet</a></th>
                                 </tr>

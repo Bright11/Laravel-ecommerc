@@ -13,7 +13,7 @@
                   <div class="col-md-4">
                     <a href="{{route('details',$item['id'])}}" class="col4class" title="{{$item['name']}} Details">
                     <div class="card proclass">
-                      <img src="{{Storage::url($item['image'])}}" class="card-img-top" alt="{{$item['name']}} image">
+                      <img src="{{asset('product/'.$item['image'])}}" class="card-img-top" alt="{{$item['name']}} image">
                       <div class="card-body">
                         <h1>{{$item['name']}}</h1>
                         <p>Price: {{$item['price']}}</p>
@@ -26,5 +26,5 @@
 
                 </div>
             </div>
-        
+
 @endsection

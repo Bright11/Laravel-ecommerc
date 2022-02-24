@@ -7,7 +7,7 @@
     <div class="carousel-inner">
       @foreach ($products as $item)
       <div class="carousel-item {{$item['id']==1?'active':''}}">
-        <img src="{{Storage::url($item['image'])}}" class="d-block w-100 sliderimg" alt="...">
+        <img src="{{asset('product/'.$item['image'])}}" class="d-block w-100 sliderimg" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>{{$item['name']}}</h5>
           <p>{{$item['price']}}</p>
@@ -15,7 +15,7 @@
         </div>
       </div>
       @endforeach
-      
+
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>

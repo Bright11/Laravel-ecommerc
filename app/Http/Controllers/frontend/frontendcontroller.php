@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers\frontend;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\cart;
 use App\Models\category;
 use App\Models\products;
-use App\Models\cart;
-use Session;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+//use Session;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 //use Illuminate\Support\Facades\Auth;
 class frontendcontroller extends Controller
 {
@@ -42,7 +43,7 @@ class frontendcontroller extends Controller
     public function addprotocart(Request $req)
     {
         $cart = new cart;
-      
+
         $prod_id =$req->input('prod_id');
          $user_id =$req->input('user_id');
          $prod_name =$req->input('prod_name');
@@ -50,7 +51,7 @@ class frontendcontroller extends Controller
       if(cart::where('prod_id',$prod_id)->where('user_id',$user_id)->exists())
        {
         return redirect('/')->with('status','product already added to cart.');
-          
+
         }else{
             $cart = new cart;
             $cart->user_id=$req->session()->get('user')['id'];
@@ -63,7 +64,7 @@ class frontendcontroller extends Controller
             return redirect('/')->with('status','product added to cart.');
         }
         //cart calculation
-        
+
         }
         function cartItem()
         {
@@ -76,11 +77,11 @@ class frontendcontroller extends Controller
             $cart=DB::table('carts')
             ->where('carts.user_id',$user_id)
             ->get();
-            
+
            return view('frontendviews/cartpage',['cart'=>$cart]);
         }
 
-       
+
        public function removecart($id)
     {
         $user_id=Session::get('user')['id'];
@@ -95,4 +96,4 @@ class frontendcontroller extends Controller
             return view('frontendviews/searchitem',['products'=>$search]);
         }
        }
-          
+

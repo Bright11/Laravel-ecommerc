@@ -29,7 +29,7 @@ View Categories
                                    <tr>
                                        <th>{{$key+1}}</th>
                                     <th>{{$item['name']}}</th>
-                                    <th><img src="{{Storage::url($item['image'])}}" width="80"/></th>
+                                    <th><img src="{{asset('catigory/' .$item['image'])}}" width="80"/></th>
                                     <th><a href="/admins/updatecartpage/{{$item['id']}}" class="btn btn-success">Update</a></th>
                                     <th><a href="#" class="btn btn-danger">Delet</a></th>
                                 </tr>

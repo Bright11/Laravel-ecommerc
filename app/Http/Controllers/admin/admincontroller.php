@@ -23,14 +23,16 @@ class admincontroller extends Controller
     }
     function addcartodb(Request $req)
     {
-       $categories = new category();
-       $path = $req->image->store('public/cartegoryimg');
-       if($file=$req->file('image'))
+       $c = new category();
+       $c->name=$req->name;
+       if($req->hasfile('image'))
        {
-           category::create([
-            'name'=>$req->name,
-            'image'=>$path,
-           ]);
+            $file = $req->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('catigory/',$filename);
+            $c->image = $filename;
+            $c->save();
            return redirect('admins/viewcart')->with('status','Category added successfully');
        }
     }
@@ -41,23 +43,23 @@ class admincontroller extends Controller
     }
     function addprotodb(Request $req)
     {
-                //the image will be on storage folder
-        //storage/app/public
-        // to see the image,
-        //php artisan storage:link
-        $path = $req->image->store('public/productimg');
-        //return $path;
-        products::create([
-            'name'=>$req->name,
-            'cart_id'=>$req->cart_id,
-            'price'=>$req->price,
-            'discount'=>$req->discount,
-            'discription'=>$req->discription,
-            'keywords'=>$req->keywords,
-            'image'=>$path,
-        ]);
-        return redirect('admins/viewpro')->with('status','Product added successfully');
+        $p= new products;
+            $p->name=$req->name;
+            $p->cart_id=$req->cart_id;
+            $p->price=$req->price;
+            $p->discount=$req->discount;
+            $p->discription=$req->discription;
+            $p->keywords=$req->keywords;
+          //  'image'=>$path,
+                $file = $req->file('image');
+                $extenstion = $file->getClientOriginalExtension();
+                $filename = time().'.'.$extenstion;
+                $file->move('product/',$filename);
+                $p->image = $filename;
+                $p->save();
+                return redirect('admins/viewpro')->with('status','Product added successfully');
     }
+
     function viewcart()
     {
         $categories = category::all();
@@ -89,7 +91,7 @@ class admincontroller extends Controller
     }
     function viewpro()
     {
-        
+
         $products = products::all();
         return view('admins/viewpro',['products'=>$products]);
     }

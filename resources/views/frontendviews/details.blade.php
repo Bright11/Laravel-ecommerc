@@ -10,12 +10,12 @@
             </div>
         <div class="row">
                 <div class="col-md-5">
-                   
-                    <img src="{{Storage::url($products->image)}}" class="card-img-top" alt="{{$products->name}} image">
+
+                    <img src="{{asset('product/'.$products->image)}}" class="card-img-top" alt="{{$products->name}} image">
                 </div>
-    
+
                 <div class="col-md-6 prodetails">
-                    
+
                     <div class="detailspron">
                         <h1> {{$products->name}}</h1>
                     </div>
@@ -36,17 +36,17 @@
                         <input type="hidden" name="prod_price" class="pro_id" value="{{$products->price}}"/>
                         <input type="hidden" name="prod_image" class="pro_id" value="{{$products->image}}"/>
                     <button type="submit">add to cart<i class="fa fa-cart-arrow-down"></i></button>
-                        
+
                     </div>
                     </form>
                     <div class="detailspron">
-    
+
                         <p> {{$products->discription}}</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </div>
-    
+
 @endsection
